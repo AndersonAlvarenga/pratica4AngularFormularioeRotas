@@ -1,0 +1,32 @@
+<form #formpost="ngForm" (ngSubmit)="onSubmit(formpost)">
+    <div class="form-group">
+        <label>Titulo:</label>
+        <input type="text" name="title" [(ngModel)]="postForm.title" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Comentário:</label>
+        <input type="text" name="comentario" [(ngModel)]="postForm.body" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Users:</label>
+
+        <select type="text" name="userId" [(ngModel)]="postForm.userId" class="form-control">
+            <option value=""></option>
+            <option *ngFor='let user of userPost' value={{user.id}}>{{user.name}}</option>
+        </select>
+    </div>
+    <div>
+        <button class="btn btn-block btn-danger">Postar</button>>
+    </div>
+    <hr>
+    <div id="divPost" *ngFor='let post of arrayPost'>
+       <p>Id do Usuário: {{post.userId}}</p>
+       <p>Id do Post: {{post.id}}</p>
+       <p>Titulo: {{post.title}}</p>
+       <p>Body: {{post.body}}</p>
+       <app-comment *ngIf="post.exibirComentario==true" [post]="post"></app-comment>
+       <button (click)="exibirComent(post.id)">Exibir Comentário</button>
+       <hr>
+    </div>
+
+</form>

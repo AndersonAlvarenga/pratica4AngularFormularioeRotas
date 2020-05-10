@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pratica4"
+    }
+  },
+  "defaultProject": "pratica4",
+  "cli": {
+    "analytics": "cd75514f-4a5b-41d2-94c1-e0dbe6c9a9cd"
+  }
 }

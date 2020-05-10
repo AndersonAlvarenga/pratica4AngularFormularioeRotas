@@ -1,0 +1,12 @@
+th{
+    padding: 5px;
+    border: black solid 2px;
+}
+td{
+    border: black solid 2px;
+}
+table{
+    font-size: 13px;
+    text-align: center;
+
+}

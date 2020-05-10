@@ -1,0 +1,39 @@
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Nome de Usuário</th>
+        <th>Email</th>
+        <th>Rua</th>
+        <th>Número</th>
+        <th>Cidade</th>
+        <th>Código Postal</th>
+        <th>Latitude</th>
+        <th>Logitude</th>
+        <th>Telefone</th>
+        <th>WebSite</th>
+        <th>Nome da Empresa</th>
+        <th>Slogan da Empresa</th>
+        <th>Bs</th>
+    </tr>
+    <tr *ngFor = 'let user of arrayUser'>
+        <td>{{user?.id}}</td>
+        <td>{{user?.name}}</td>
+        <td>{{user?.username}}</td>
+        <td>{{user?.email}}</td>
+        <td>{{user?.address.street}}</td>
+        <td>{{user?.address.suite}}</td>
+        <td>{{user?.address.city}}</td>
+        <td>{{user?.address.zipcode}}</td>
+        <td>{{user?.address.geo.lat}}</td>
+        <td>{{user?.address.geo.lng}}</td>
+        <td>{{user?.phone}}</td>
+        <td>{{user?.website}}</td>
+        <td>{{user?.company.name}}</td>
+        <td>{{user?.company.catchPhrase}}</td>
+        <td>{{user?.company.bs}}</td>
+      
+        
+        
+    </tr>
+</table>
